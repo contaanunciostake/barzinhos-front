@@ -39,7 +39,7 @@ const AdminPanel = ({ onBack }) => {
     setActionLoading(establishmentId)
     
     try {
-      const response = await fetch(`http://localhost:5000/api/establishments/${establishmentId}`, {
+      const response = await fetch(`https://barzinhos-api.onrender.com/api/establishments/${establishmentId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
