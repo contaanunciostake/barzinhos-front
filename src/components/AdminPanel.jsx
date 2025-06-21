@@ -18,7 +18,7 @@ const AdminPanel = ({ onBack }) => {
   const fetchEstablishments = async () => {
     try {
       // Buscar estabelecimentos pendentes
-      const pendingResponse = await fetch('http://localhost:5000/api/establishments?approved_only=false')
+      const pendingResponse = await fetch('https://barzinhos-api.onrender.com/api/establishments?approved_only=false')
       const pendingData = await pendingResponse.json()
       
       if (pendingData.success) {
