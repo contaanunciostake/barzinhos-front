@@ -1,6 +1,6 @@
 // Configuração da API
-export const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? "https://barzinhos-api.onrender.com" 
+export const API_BASE_URL = import.meta.env.PROD
+  ? "https://barzinhos-api.onrender.com"
   : "http://localhost:5000";
 
 // Função para fazer requisições HTTP
