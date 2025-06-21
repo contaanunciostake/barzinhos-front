@@ -36,7 +36,7 @@ const HomePage = () => {
       if (selectedNeighborhood !== 'Todos') params.append('neighborhood', selectedNeighborhood)
       if (selectedType !== 'Todos') params.append('type', selectedType)
       
-      const response = await fetch(`http://localhost:5000/api/establishments?${params}`)
+      const response = await fetch(`https://barzinhos-api.onrender.com/api/establishments?${params}`)
       const data = await response.json()
       
       if (data.success) {
