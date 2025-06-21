@@ -155,7 +155,7 @@ const HomePage = () => {
                   <SelectValue placeholder="Tipo" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">Todos os tipos</SelectItem>
+                  <SelectItem value="todos">Todos os tipos</SelectItem>
                   {types.map((type) => (
                     <SelectItem key={type} value={type}>
                       {type}
@@ -169,7 +169,7 @@ const HomePage = () => {
                   <SelectValue placeholder="Bairro" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">Todos os bairros</SelectItem>
+                  <SelectItem value="todos">Todos os bairros</SelectItem>
                   {neighborhoods.map((neighborhood) => (
                     <SelectItem key={neighborhood} value={neighborhood}>
                       {neighborhood}
