@@ -49,7 +49,7 @@ const EstablishmentRegistration = ({ onBack }) => {
     setSubmitMessage('')
 
     try {
-      const response = await fetch('http://localhost:5000/api/establishments', {
+      const response = await fetch('https://barzinhos-api.onrender.com/api/establishments', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
