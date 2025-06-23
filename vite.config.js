@@ -4,7 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
 
 export default defineConfig({
-  base: './', // 👈 ISSO É ESSENCIAL PARA FUNCIONAR NO VERCEL!
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
