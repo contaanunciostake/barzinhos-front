@@ -14,9 +14,11 @@ import {
   XCircle,
   Eye,
   Trash2,
-  Star
+  Star,
+  CreditCard
 } from 'lucide-react';
 import { userService, establishmentService, reviewService } from '../lib/api';
+import PaymentSettings from './PaymentSettings';
 
 const StatsCard = ({ title, value, icon: Icon, description }) => (
   <Card>
@@ -479,6 +481,10 @@ const AdminPanel = () => {
           <TabsTrigger value="establishments">Estabelecimentos</TabsTrigger>
           <TabsTrigger value="users">Usuários</TabsTrigger>
           <TabsTrigger value="reviews">Avaliações</TabsTrigger>
+          <TabsTrigger value="payments">
+            <CreditCard className="h-4 w-4 mr-2" />
+            Pagamentos
+          </TabsTrigger>
         </TabsList>
 
         <TabsContent value="establishments">
@@ -522,10 +528,13 @@ const AdminPanel = () => {
             </CardContent>
           </Card>
         </TabsContent>
+
+        <TabsContent value="payments">
+          <PaymentSettings />
+        </TabsContent>
       </Tabs>
     </div>
   );
 };
 
 export default AdminPanel;
-
