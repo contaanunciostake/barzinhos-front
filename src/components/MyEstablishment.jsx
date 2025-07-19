@@ -103,7 +103,7 @@ const ImageGallery = ({ establishment }) => {
       const formData = new FormData();
       formData.append('image', file);
       
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001'}/api/establishments/${establishment.id}/images`, {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL || 'https://barzinhos-api.onrender.com'}/api/establishments/${establishment.id}/images`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -132,7 +132,7 @@ const ImageGallery = ({ establishment }) => {
   // Mutation para deletar imagem
   const deleteMutation = useMutation({
     mutationFn: async (imageId) => {
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001'}/api/establishments/${establishment.id}/images/${imageId}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL || 'https://barzinhos-api.onrender.com'}/api/establishments/${establishment.id}/images/${imageId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -256,7 +256,7 @@ const ImageGallery = ({ establishment }) => {
               <div key={image.id} className="relative group">
                 <div className="aspect-square rounded-lg overflow-hidden bg-gray-100">
                   <img
-                    src={`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001'}/static/images/establishments/${image.filename}`}
+                    src={`${import.meta.env.VITE_API_BASE_URL || 'https://barzinhos-api.onrender.com'}/static/images/establishments/${image.filename}`}
                     alt={image.original_filename}
                     className="w-full h-full object-cover"
                   />

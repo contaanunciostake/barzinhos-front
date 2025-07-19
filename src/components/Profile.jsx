@@ -200,7 +200,7 @@ const Profile = () => {
           >
             {user.profile_photo ? (
               <img
-                src={`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001'}/static/images/profiles/${user.profile_photo}`}
+                src={`${import.meta.env.VITE_API_BASE_URL || 'https://barzinhos-api.onrender.com'}/static/images/profiles/${user.profile_photo}`}
                 alt={user.username}
                 className="w-16 h-16 rounded-full object-cover"
               />

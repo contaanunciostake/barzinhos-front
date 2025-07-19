@@ -35,7 +35,7 @@ const ImageCarousel = ({ images }) => {
     <div className="space-y-4">
       <div className="relative">
         <img
-          src={`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001'}/static/images/establishments/${images[currentImage].filename}`}
+          src={`${import.meta.env.VITE_API_BASE_URL || 'https://barzinhos-api.onrender.com'}/static/images/establishments/${images[currentImage].filename}`}
           alt={`Imagem ${currentImage + 1}`}
           className="w-full h-64 object-cover rounded-lg"
         />
@@ -65,7 +65,7 @@ const ImageCarousel = ({ images }) => {
               }`}
             >
               <img
-                src={`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001'}/static/images/establishments/${image.filename}`}
+                src={`${import.meta.env.VITE_API_BASE_URL || 'https://barzinhos-api.onrender.com'}/static/images/establishments/${image.filename}`}
                 alt={`Miniatura ${index + 1}`}
                 className="w-full h-full object-cover rounded"
               />

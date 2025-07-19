@@ -88,7 +88,7 @@ const PremiumEstablishments = () => {
               <div className="relative">
                 {primaryImage ? (
                   <img
-                    src={`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001'}/static/images/establishments/${primaryImage.filename}`}
+                    src={`${import.meta.env.VITE_API_BASE_URL || 'https://barzinhos-api.onrender.com'}/static/images/establishments/${primaryImage.filename}`}
                     alt={establishment.name}
                     className="w-full h-48 object-cover"
                   />

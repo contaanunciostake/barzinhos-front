@@ -34,7 +34,7 @@ const Avatar = ({ user, size = 'md', className = '' }) => {
   if (user?.profile_photo) {
     return (
       <img
-        src={`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001'}/static/images/profiles/${user.profile_photo}`}
+        src={`${import.meta.env.VITE_API_BASE_URL || 'https://barzinhos-api.onrender.com'}/static/images/profiles/${user.profile_photo}`}
         alt={user.username || 'Avatar'}
         className={`${sizes[size]} ${className} rounded-full object-cover border-2 border-white shadow-md`}
       />
